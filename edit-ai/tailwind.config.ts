@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
-  darkMode: ["class"],
+  darkMode: ["class"], // 启用类名切换模式
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -52,6 +52,14 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // 添加自定义颜色
+        custom: {
+          DEFAULT: "#FFA500", // 桔色背景
+          foreground: "#FF0000", // 红色字体
+        },
+        'custom-background': 'black',
+        'custom-bg': '#FFA500', // 桔色背景
+        'custom-text': '#FF0000', // 红色字体
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -75,6 +83,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

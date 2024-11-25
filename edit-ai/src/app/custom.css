@@ -1,0 +1,9 @@
+:root {
+  --background: #FFFFFF; /* 默认背景颜色 */
+  --foreground: #000000; /* 默认文本颜色 */
+}
+
+[data-theme='custom'] {
+  --background: #FFA500; /* 桔色背景 */
+  --foreground: #FF0000; /* 红色字体 */
+}
