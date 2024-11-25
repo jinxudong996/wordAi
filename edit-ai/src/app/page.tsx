@@ -4,6 +4,8 @@ import HomeNav from '@/components/HomeNav'
 import Slogan from '@/components/Slogan'
 import { useTheme } from 'next-themes'
 
+import AIIsland from '@/components/AIIsland'
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col justify-center text-center">
