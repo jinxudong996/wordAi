@@ -1,8 +1,10 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
+
 generator client {
     provider = "prisma-client-js"
 }
+
 datasource db {
     provider = "postgresql"
     // NOTE: When using mysql or sqlserver, uncomment the @db.Text annotations in model Account below
@@ -11,11 +13,13 @@ datasource db {
     // https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#string
     url      = env("DATABASE_URL")
 }
+
 // 数据模型
 model Doc {
     id        Int      @id @default(autoincrement())
-    title      String
-    content    String
+    uid       String   @unique @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+    title     String
+    content   String
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 }
