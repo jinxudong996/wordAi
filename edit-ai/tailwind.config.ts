@@ -3,10 +3,10 @@ import type { Config } from "tailwindcss";
 const config = {
   darkMode: ["class"], // 启用类名切换模式
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -57,9 +57,9 @@ const config = {
           DEFAULT: "#FFA500", // 桔色背景
           foreground: "#FF0000", // 红色字体
         },
-        'custom-background': 'black',
-        'custom-bg': '#FFA500', // 桔色背景
-        'custom-text': '#FF0000', // 红色字体
+        "custom-background": "black",
+        "custom-bg": "#FFA500", // 桔色背景
+        "custom-text": "#FF0000", // 红色字体
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -79,6 +79,11 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      variants: {
+        extend: {
+          display: ["group-hover"],
+        },
       },
     },
   },
